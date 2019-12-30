@@ -1,0 +1,16 @@
+== OVERVIEW
+Dieses Tool erlaubt es einem Nutzer, Fragen und Antworten in den entsprechenden Textdateien abzulegen, um das zugehörige Wissen abzufragen. 
+
+Das Tool wurde ursprünglich erstellt um Definitionen und Fragen aus den Fächern Compilerbau 1 und 2 an der RWTH Aachen abzufragen, daher ergibt sich die Aufteilung der Quelldateien.
+Da ich die Fragen jedoch nicht selbst erstellt hatte, sondern aus einem Katalog des Lehrstuhls übernommen hatte, habe ich sie aus dieser öffentlichen Version entfernt.
+
+Ferner ist die Generation der Zufallszahlen in `random.cpp` komplett aus https://www.c-plusplus.net/forum/topic/172876/zuf%C3%A4lle-gibt-s-funktionen-rund-um-rand-random-und-den-zufall[diesem Artikel] des Nutzers Marc++us übernommen.
+
+== BENUTZUNG
+Es existiert ein makefile, `make` kompiliert automatisch alles nötige, sofern g++ installiert ist. 
+Danach kann `fragenGenerator` oder `defGenerator` ausgeführt werden, alternativ auch `make frage` oder `make def`
+Für den Fragengenerator können die Argument "1" und "2" übergeben werden um Fragen aus der entsprechenden Datei abzufragen
+Mit `q` - ENTER wird das Programm beendet
+
+fragenGenerator gibt Fragen aus `Fragen.txt` und die entsprechenden Antworten aus `Antworten.txt` aus. Wird "2" als Argument übergeben, werden die Fragen aus `Fragen2.txt` genommen, und Antworten nacheinander aus `Antworten2.txt` und `Antworten2 alternativ.txt` ausgegeben.
+defGenerator fragt Definitionen aus `Definitionen.txt` ab.
